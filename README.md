@@ -31,31 +31,65 @@
 
 ---
 
-## ✨ Core Features
+## 📖 The Ultimate Step-by-Step Setup Guide (READ CAREFULLY)
 
-- **🚀 Lightning-Fast UI Automation:** Built on `uiautomator2` for millisecond-level screen interaction.Please ensure the changes are complete; do not modify only the numbers.
-- **🛡️ Enterprise-Grade Concurrency (Queue System):** Never worry about overlapping signals. The built-in FIFO queue ensures that if multiple signals arrive within seconds, they are executed in a strictly orderly sequence, preventing UI conflict.
-- **📱 Multi-Device Support:** Run multiple emulators or physical phones from a single PC. (See Multi-Device Setup below).
-- **🎛️ Dynamic Position Sizing (Scaling):** Supports dynamic `quantity` payload in JSON. If the cloud sends `quantity: 3`, the bot will automatically loop the execution 3 times, perfectly bypassing strict single-order limits on specific exchanges.
-- **🔒 Cloud-Based Auth System:** Real-time license verification and heartbeat monitoring to ensure secure access.
+To ensure the bot runs perfectly, please follow these exact steps. Do not skip any!
+
+### Step 1: Client Configuration (UI Settings)
+
+1. **License Key:** 
+   - The default text is `TEST_001`. Your administrator will provide you with a VIP key (e.g., `VIP_999`). 
+   - 🚨 **CRITICAL WARNING:** You must replace the **ENTIRE** string! Do not just change the numbers. If you enter `TEST_999`, it will **FAIL**. It must be exactly exactly what the admin gave you (e.g., `VIP_999`).
+2. **Server IP:** 
+   - Leave this exactly as it is (default is usually `104.156.254.63`). 
+   - 🚨 **CRITICAL WARNING:** **DO NOT TOUCH THIS!** If you change this, your client will completely disconnect from the cloud signals.
+3. **Trade Amount (USDT):** 
+   - Enter your base order size per trade (e.g., `10` or `50`).
+
+### Step 2: Prepare Your Android Phone (Developer Mode)
+
+To allow the PC to control your phone, you must enable a few hidden Android settings.
+
+1. **Enable Developer Options:** 
+   - Go to your phone's `Settings` -> `About Phone`.
+   - Find `Build Number` and **tap it 7 times quickly**. You will see a message saying "You are now a developer!"
+2. **Enable USB Debugging:** 
+   - Go back to `Settings` -> find `Developer Options` (usually under System).
+   - Turn ON **USB Debugging**.
+   - Plug your phone into the PC. If a popup appears on your phone asking "Allow USB Debugging?", check "Always allow" and click **OK**.
+
+> 💡 **PRO TIP (Ask AI):** Android menus look different on Samsung, Xiaomi, Motorola, etc. If you can't find "Build Number" or "USB Debugging", please ask an AI assistant like **ChatGPT, Claude, or Doubao**. 
+> *Just copy and paste this into AI:* **"How do I turn on Developer Options and USB Debugging on my [Insert Your Phone Model Here]?"**
+
+### Step 3: Device SN (Serial Number) Routing
+
+- **If you only use ONE phone:** Leave the "Device SN" box completely **BLANK**. The software will auto-detect your phone.
+- **If you use MULTIPLE phones on one PC:** 
+  1. You must create a **NEW FOLDER** for each device (e.g., Folder `Phone_A`, Folder `Phone_B`). Put the `.exe` inside each folder and run them separately!
+  2. You cannot leave the SN box blank. You must input the exact SN code of each phone. 
+  3. *How to find SN?* Go to `Settings` -> `About Phone` -> `Status` -> `Serial Number`. Alternatively, open your computer terminal (CMD) and type `adb devices`.
+
+### Step 4: Calibrating Screen Coordinates (X , Y)
+
+Since every phone screen has a different size, you must tell the bot exactly where to tap.
+
+1. Go back to your phone's **Developer Options**.
+2. Scroll down and turn ON **Pointer Location** (sometimes called "Show taps and pointer location").
+3. Now, open your trading app. Tap on the exact spot where the "Amount Input" box is. Look at the very top of your phone screen: you will see a bar showing **X:** and **Y:** coordinates (e.g., `X: 540.5  Y: 1200.0`).
+4. Type those exact X and Y numbers into the corresponding boxes in the client software. Decimals are fully supported.
+5. Repeat this for the YES button, NO button, and Confirm button.
+6. Once you are done, you can turn **Pointer Location** OFF in your phone settings.
+
+### Step 5: Start the Bot
+
+- Click **💾 Save Settings** first.
+- Click **▶ START BOT**. 
+- ⚠️ **DO NOT touch the mobile device screen** while the bot is running, or you might interrupt the automation!
 
 ---
 
-## 📖 Step-by-Step Guide
+## 📡 TradingView Webhook Configuration
 
-### 1. Initial Setup
-1. Enter your **License Key** (Provided by your server admin).
-2. Enter the **Server IP** of your cloud backend (e.g., `104.156.xxx.xxx`).
-3. Set your base **Trade Amount (USDT)** per execution loop.
-4. Calibrate the **Screen Coordinates (X, Y)** to match your specific Android device resolution. Decimals are auto-rounded.
-
-### 2. Multi-Device Routing (Crucial)
-If you want to control **multiple phones** on a single PC, you **CANNOT** run multiple instances from the same folder.
-- Create a NEW folder for each device (e.g., `Device_A`, `Device_B`).
-- Copy the `.exe` file into each folder.
-- Run them separately, and enter the specific **Hardware SN (Serial Number)** of each phone in its respective client window. (Leave blank if you are only using one phone).
-
-### 3. TradingView Webhook Configuration
 Set up an alert on TradingView and point the Webhook URL to your cloud server:
 `http://<YOUR_SERVER_IP>/api/tv_signal`
 
