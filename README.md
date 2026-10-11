@@ -33,7 +33,7 @@
 
 ## ✨ Core Features
 
-- **🚀 Lightning-Fast UI Automation:** Built on `uiautomator2` for millisecond-level screen interaction.
+- **🚀 Lightning-Fast UI Automation:** Built on `uiautomator2` for millisecond-level screen interaction.Please ensure the changes are complete; do not modify only the numbers.
 - **🛡️ Enterprise-Grade Concurrency (Queue System):** Never worry about overlapping signals. The built-in FIFO queue ensures that if multiple signals arrive within seconds, they are executed in a strictly orderly sequence, preventing UI conflict.
 - **📱 Multi-Device Support:** Run multiple emulators or physical phones from a single PC. (See Multi-Device Setup below).
 - **🎛️ Dynamic Position Sizing (Scaling):** Supports dynamic `quantity` payload in JSON. If the cloud sends `quantity: 3`, the bot will automatically loop the execution 3 times, perfectly bypassing strict single-order limits on specific exchanges.
