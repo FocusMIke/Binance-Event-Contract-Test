@@ -23,6 +23,21 @@
 
 ---
 
+## 🚀 What's New in the Latest Update
+
+We have completely overhauled the client UI and execution engine to give you maximum control over your trading algorithms and device compatibility:
+
+- **📈 Multi-Strategy Selection (V3 to V8):** You can now choose from 6 different algorithmic strategies directly in the UI. Each strategy displays its historical Win Rate and Trading Frequency (e.g., V7 has a 58.4% win rate with 158 trades/month). 
+- **⚡ Adjustable Execution Speed (Fast / Medium / Slow):** 
+  - **Fast:** For high-end devices and emulators. Lightning-fast execution.
+  - **Medium (Default):** The perfectly balanced speed for most standard smartphones.
+  - **Slow:** For older devices. It significantly increases the UI delay to ensure the app has enough time to render without missing taps.
+- **🛡️ V8 Extreme Safety Lock:** The V8 strategy executes up to 290 trades a month. If selected, the software will forcibly lock your execution speed to "Fast" to meet the high-frequency demand.
+
+*(💡 **Friendly Advice:** If you are new or don't have specific requirements, we strongly encourage you to **keep the default settings** [V7 Strategy & Medium Speed]. They are highly optimized for stability!)*
+
+---
+
 ## 📥 Download & Installation
 
 **[👉 Click here to download the latest Release (Pro Edition)](https://github.com/FocusMIke/Binance-Event-Contract-Test/tags)**
@@ -39,11 +54,14 @@ To ensure the bot runs perfectly, please follow these exact steps. Do not skip a
 
 1. **License Key:** 
    - The default text is `TEST_001`. Your administrator will provide you with a VIP key (e.g., `VIP_999`). 
-   - 🚨 **CRITICAL WARNING:** You must replace the **ENTIRE** string! Do not just change the numbers. If you enter `TEST_999`, it will **FAIL**. It must be exactly exactly what the admin gave you (e.g., `VIP_999`).
+   - 🚨 **CRITICAL WARNING:** You must replace the **ENTIRE** string! Do not just change the numbers. If you enter `TEST_999`, it will **FAIL**. It must be exactly what the admin gave you.
 2. **Server IP:** 
    - Leave this exactly as it is (default is usually `104.156.254.63`). 
    - 🚨 **CRITICAL WARNING:** **DO NOT TOUCH THIS!** If you change this, your client will completely disconnect from the cloud signals.
-3. **Trade Amount (USDT):** 
+3. **Strategy Version & Execution Speed:**
+   - Choose your preferred algorithmic version and phone tapping speed. 
+   - **Recommendation:** Just leave them as **V7** and **Medium** unless you know exactly what you are doing!
+4. **Trade Amount (USDT):** 
    - Enter your base order size per trade (e.g., `10` or `50`).
 
 ### Step 2: Prepare Your Android Phone (Developer Mode)
